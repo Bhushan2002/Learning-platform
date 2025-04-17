@@ -88,7 +88,7 @@ const UserBilling = () => {
                         {new Date(transaction.dateTime).toLocaleDateString()}
                       </TableCell>
                       <TableCell className="billing__table-cell billing__amount">
-                        {formatPrice(transaction.amount)}
+                      ₹{transaction.amount}
                       </TableCell>
                       <TableCell className="billing__table-cell">
                         {transaction.paymentProvider}

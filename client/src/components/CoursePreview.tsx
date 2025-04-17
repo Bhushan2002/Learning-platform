@@ -4,7 +4,7 @@ import React from "react";
 import AccordionSections from "./AccordionSections";
 
 const CoursePreview = ({ course }: CoursePreviewProps) => {
-  const price = formatPrice(course.price);
+  const price = course.price;
   return (
     <div className="course-preview">
       <div className="course-preview__container">
