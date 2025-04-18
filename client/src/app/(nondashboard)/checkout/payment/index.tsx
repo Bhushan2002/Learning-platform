@@ -31,11 +31,11 @@ const PaymentPageContent = () => {
       return;
     }
 
-    const baseUrl = "http://localhost:3000"; 
-      // ? `http://${process.env.NEXT_PUBLIC_LOCAL_URL}`
-      // : process.env.NEXT_PUBLIC_VERCEL_URL
-      //   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-      //   : undefined;
+    const baseUrl = process.env.NEXT_PUBLIC_LOCAL_URL
+      ? `http://${process.env.NEXT_PUBLIC_LOCAL_URL}`
+      : process.env.NEXT_PUBLIC_VERCEL_URL
+        ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+        : undefined;
 
     const result = await stripe.confirmPayment({
       elements,
